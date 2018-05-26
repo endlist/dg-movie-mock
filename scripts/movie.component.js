@@ -1,7 +1,6 @@
 var app = angular.module('dgMovieApp');
 
 function DgMovieController () {
-  alert('hello');
 }
 
 app.component('dgMovie',
