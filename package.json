@@ -1,0 +1,14 @@
+{
+  "name": "dg-movie-mock-master",
+  "version": "1.0.0",
+  "description": "Display a vertical list of ten movies which can also be filtered by decade.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Li Wren",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.9.1"
+  }
+}
