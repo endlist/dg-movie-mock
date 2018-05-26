@@ -15,3 +15,12 @@ Images will be blocked from hotlinking. Manually download all of those images to
 Build using Angular.js version [1.5.8](https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js) and SASS compiled to CSS. Build at least one AngularJS component. Make sure your code is supported by Chrome, FF, and IE11.
 
 Publish your completed project to a github repo provide us with a link.
+
+## Dev Startup
+
+```
+yarn install
+node server.js
+```
+
+`gulp watch` will watch for changes in sass and js files and build.
