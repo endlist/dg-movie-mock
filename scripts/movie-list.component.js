@@ -2,8 +2,13 @@ var app = angular.module('dgMovieApp');
 
 function DgMovieListController ($scope, MovieSvc) {
   var $ctrl = $scope.$ctrl;
-  MovieSvc.getMovies().then(function(response) {
-    $ctrl.movies = response.data.Search;
+  var setMovies = function (movies) {
+    $ctrl.movies = movies;
+  }
+
+  MovieSvc.getMovies().then(setMovies); // initialize default dataset
+  MovieSvc.registerObserverCallback(function () {
+    MovieSvc.getMovies().then(setMovies);
   });
 }
 

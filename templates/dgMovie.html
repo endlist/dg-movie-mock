@@ -1,14 +1,16 @@
-<li>
-  <img src="{{ $ctrl.movie.localImage }}" />
+<li class="movie">
+  <img ng-src="{{ $ctrl.movie.localImage }}" class="movie-poster" />
 
-  <h4>{{ $ctrl.movie.Title }}</h4>
-  <div class="metadata">
-    <span class="rating">{{ $ctrl.movie.Rated }}</span>
-    <span class="runtime">{{ $ctrl.movie.Runtime }}</span>
-    <span class="release-date">{{ $ctrl.movie.Released }}</span>
+  <div class="movie-container">
+    <h3 class="movie-title">{{ $ctrl.movie.Title }}</h4>
+    <div class="movie-metadata">
+      <span class="movie-rating">{{ $ctrl.movie.Rated }}</span>
+      <span class="movie-runtime">{{ $ctrl.movie.Runtime }}</span>
+      <span class="movie-release-date">{{ $ctrl.movie.Released }}</span>
+    </div>
+
+    <div class="movie-plot">{{ $ctrl.movie.Plot }}</div>
+
+    <a href="{{ $ctrl.movie.imdbLink }}" class="movie-link">View on IMDB</a>
   </div>
-
-  <div class="plot">{{ $ctrl.movie.Plot }}</div>
-
-  <a href="{{ $ctrl.movie.imdbLink }}">View on IMDB</a>
 </li>

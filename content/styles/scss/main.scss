@@ -1,5 +1,149 @@
-$bg: white;
+$fontColor: #353739;
+$gold: #E1AE51;
+$grey: #8F979B;
 
 body {
-  background: $bg;
+  font-family: arial, sans-serif;
+  color: $fontColor;
+  font-size: 16px;
+}
+
+/* MOVIE LIST STYLING */
+$movieBg: #E8EAED;
+$ratingColor: #C3C9CF;
+
+.movie-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.movie {
+  display: flex;
+  flex-items: column;
+  background: $movieBg;
+  border: 4px solid;
+  border-radius: 10px;
+  padding: 1.75rem;
+  margin: 1rem 0;
+
+  .movie-poster {
+    border-radius: 8px;
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  .movie-title {
+    font-family: trebuchet ms, sans-serif;
+    font-size: 3rem;
+    line-height: 2.75rem;
+    margin: 0;
+    border-bottom: 2px solid $grey;
+    padding-bottom: 1rem;
+  }
+
+  .movie-metadata {
+    margin: 1rem 0;
+    font-size: 1.75rem;
+    display: flex;
+
+    .movie-rating {
+      border: 2px solid $grey;
+      padding: 0.5rem 1rem 0.25rem;
+      border-radius: 5px;
+      color: $grey;
+      font-weight: 600;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.5rem;
+      margin: 0 2rem 0 0;
+    }
+
+    .movie-runtime {
+      flex: 1;
+      align-self: center;
+    }
+
+    .movie-release-date {
+    }
+  }
+
+  .movie-plot {
+  }
+
+  .movie-container {
+    position: relative;
+    overflow: hidden;
+    font-size: 2rem;
+  }
+  .movie-link {
+    padding: 1.25rem 5.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    background: $gold;
+    border-radius: 8px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+/* TOGGLE STYLING */
+$toggleLabelActiveBg: #4471AD;
+$toggleLabelActiveShadow: #3D659B;
+$toggleLabelBg: #F7F8F9;
+$toggleFontColor: #63696D;
+
+.filter {
+  width: 100%;
+  overflow: hidden;
+}
+
+.toggle {
+  float: right;
+  color: $toggleFontColor;
+  margin: 0 0 1.5rem; box-sizing: border-box;
+  font-size: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px;
+  }
+
+  input + label {
+    cursor: pointer;
+    background-color: $toggleLabelBg;
+    margin: 0;
+    padding: 1rem 3.25rem;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border: solid 1px #DDD;
+    font-size: 1.75rem;
+    font-family: "trebuchet ms", sans-serif;
+    line-height: 140%;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 0 0 rgba(255,255,255,0);
+
+    &:first-of-type {border-radius: 6px 0 0 6px; border-right: none;}
+    &:last-of-type {border-radius: 0 6px 6px 0; border-left: none;}
+  }
+  input:checked + label {
+    background-color: $toggleLabelActiveBg;
+    color: #FFF;
+    box-shadow: 0 0 10px rgba($toggleLabelActiveShadow, .5);
+    border-color: $toggleLabelActiveBg;
+    z-index: 1;
+  }
+  input:focus + label {
+    outline: dotted 1px #CCC;
+    outline-offset: .45rem;
+  }
 }
