@@ -1,1 +1,14 @@
-<li>hello</li>
+<li>
+  <img src="{{ $ctrl.movie.localImage }}" />
+
+  <h4>{{ $ctrl.movie.Title }}</h4>
+  <div class="metadata">
+    <span class="rating">{{ $ctrl.movie.Rated }}</span>
+    <span class="runtime">{{ $ctrl.movie.Runtime }}</span>
+    <span class="release-date">{{ $ctrl.movie.Released }}</span>
+  </div>
+
+  <div class="plot">{{ $ctrl.movie.Plot }}</div>
+
+  <a href="{{ $ctrl.movie.imdbLink }}">View on IMDB</a>
+</li>
