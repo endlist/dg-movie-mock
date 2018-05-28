@@ -1,4 +1,13 @@
-#Task:
+## Dev Startup
+
+```
+yarn install
+node server.js
+```
+
+Server runs at `http://localhost:3000` by default and running `gulp watch` in a separate terminal will watch for changes in sass and js files and rebuild as needed.
+
+# Task:
 Display a vertical list of ten movies which can also be filtered by decade.
 
 A UI mockup can be found in the included moviemock.sketch file (or moviemock.pdf if you don't have Sketch).
@@ -15,12 +24,3 @@ Images will be blocked from hotlinking. Manually download all of those images to
 Build using Angular.js version [1.5.8](https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js) and SASS compiled to CSS. Build at least one AngularJS component. Make sure your code is supported by Chrome, FF, and IE11.
 
 Publish your completed project to a github repo provide us with a link.
-
-## Dev Startup
-
-```
-yarn install
-node server.js
-```
-
-`gulp watch` will watch for changes in sass and js files and build.

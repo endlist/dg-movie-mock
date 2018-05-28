@@ -1,5 +1,5 @@
 $fontColor: #353739;
-$gold: #E1AE51;
+$gold: #F9B44A;
 $grey: #8F979B;
 
 body {
@@ -9,7 +9,7 @@ body {
 }
 
 /* MOVIE LIST STYLING */
-$movieBg: #E8EAED;
+$movieBg: #E8EBEE;
 $ratingColor: #C3C9CF;
 
 .movie-list {
@@ -20,78 +20,86 @@ $ratingColor: #C3C9CF;
 
 .movie {
   display: flex;
-  flex-items: column;
   background: $movieBg;
   border: 4px solid;
   border-radius: 10px;
-  padding: 1.75rem;
+  padding: 1rem;
   margin: 1rem 0;
 
   .movie-poster {
     border-radius: 8px;
-    flex: 1;
     margin-right: 2rem;
+    width: 140px;
+    height: 100%;
+    min-height: 200px;
   }
 
   .movie-title {
     font-family: trebuchet ms, sans-serif;
-    font-size: 3rem;
-    line-height: 2.75rem;
+    font-size: 1.75rem;
+    line-height: 1.5rem;
     margin: 0;
     border-bottom: 2px solid $grey;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
   }
 
   .movie-metadata {
-    margin: 1rem 0;
-    font-size: 1.75rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
     display: flex;
 
     .movie-rating {
-      border: 2px solid $grey;
-      padding: 0.5rem 1rem 0.25rem;
+      border: 1px solid $grey;
+      padding: 0.25rem 0.5rem;
       border-radius: 5px;
       color: $grey;
       font-weight: 600;
       font-family: "Courier New", Courier, monospace;
-      font-size: 1.5rem;
-      margin: 0 2rem 0 0;
+      font-size: 0.9rem;
+      margin: 0 1rem 0 0;
+      height: 1rem;
     }
 
     .movie-runtime {
       flex: 1;
       align-self: center;
     }
-
-    .movie-release-date {
-    }
   }
 
   .movie-plot {
+    margin-bottom: 3.5rem;
   }
 
   .movie-container {
     position: relative;
     overflow: hidden;
-    font-size: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
+
   .movie-link {
-    padding: 1.25rem 5.5rem;
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    background: $gold;
-    border-radius: 8px;
-    bottom: 0;
-    right: 0;
-    position: absolute;
+    align-self: flex-end;
+    flex: 1;
+
+    a {
+      padding: 0.75rem 3rem;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      background: $gold;
+      border-radius: 3px;
+      width: 7rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 
 /* TOGGLE STYLING */
-$toggleLabelActiveBg: #4471AD;
-$toggleLabelActiveShadow: #3D659B;
+$toggleLabelActiveBg: #1A72B0;
+$toggleLabelActiveShadow: #000000;
 $toggleLabelBg: #F7F8F9;
 $toggleFontColor: #63696D;
 
@@ -120,12 +128,12 @@ $toggleFontColor: #63696D;
     cursor: pointer;
     background-color: $toggleLabelBg;
     margin: 0;
-    padding: 1rem 3.25rem;
+    padding: .5rem 2rem;
     box-sizing: border-box;
     position: relative;
     display: inline-block;
     border: solid 1px #DDD;
-    font-size: 1.75rem;
+    font-size: 1rem;
     font-family: "trebuchet ms", sans-serif;
     line-height: 140%;
     font-weight: 600;
@@ -138,9 +146,9 @@ $toggleFontColor: #63696D;
   input:checked + label {
     background-color: $toggleLabelActiveBg;
     color: #FFF;
-    box-shadow: 0 0 10px rgba($toggleLabelActiveShadow, .5);
+    box-shadow: 0 0 10px rgba($toggleLabelActiveShadow, .2);
     border-color: $toggleLabelActiveBg;
-    z-index: 1;
+    z-index: -1;
   }
   input:focus + label {
     outline: dotted 1px #CCC;
